@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+     1.v-html指令的作用是：设置元素的innerHTML
+     2.内容中有html结构会被解析为标签   
+    -->
+    <title>v-html</title>
+</head>
+<body>
+    <div id="app">
+      <p v-html="content"></p>
+      <p v-text="content"></p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+
+    var app=new Vue({
+        el:"#app",
+        data:{
+             //content:"黑马程序员"
+             content:"<a href=‘http://www.itheima.com’>黑马程序员</a>"
+        }
+    })
+
+
+    </script>
+
+</body>
+</html>

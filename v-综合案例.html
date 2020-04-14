@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>综合案例计时器</title>
+    <!--
+        1.创建Vue示例时:el(挂载点)，data(数据),methods(方法)
+        2.v-on指令的作用是绑定事件，简写为@
+        3.方法中通过this，关键字获取data中的数据
+        4.v-text指令的作用是设置元素的文本值，简写为{{}}
+        5.v-html指令的作用是：设置元素的innerHTML
+    -->
+
+</head>
+<body>
+    <div id="app">
+       <button @click="sub">-</button>
+       <span>{{num}}</span>
+       <button @click="add">+</button>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+     var num=new Vue({
+         el:"#app",
+         data:{
+               num:1
+         },
+         methods:{
+              //递减
+              sub:function(){
+                 if(this.num<1){
+                   alert("已经最小了")
+                 }else{
+                  this.num--;
+                  
+                 }
+              },
+              //累加
+              add:function(){
+                 if (this.num>9) {
+                       
+                      alert("已经最大了")
+
+                  } else {
+                       this.num++;
+                  }
+              }
+         } 
+     });
+
+    </script>
+</body>
+</html>
